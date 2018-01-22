@@ -49,12 +49,6 @@ wrld +
 urb + 
 geom_line(aes(long,lat,group=id, color=Countries), alpha = 0.3, size=0.01, data= greatcircles) + 
 theme(panel.background = element_rect(fill='#00001C',colour='#00001C'), panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-theme(legend.position = c(0,0.4),
-     legend.justification = c(0,1),
-     legend.background = element_rect(colour = NA, fill = NA),
-     legend.key = element_rect(colour = NA, fill = NA, size = 10),
-     legend.text = element_text(colour='white', size = 20)) + 
-guides(fill = guide_legend(keywidth = 20, keyheight = 20)) + 
 annotate("text",x=max(worldmap$long),y=-60,hjust=.9,size=6,
         label=paste("Flight routes from top 8 countries","Data From OpenFlights.org", sep="\n"),color="white"))
 
